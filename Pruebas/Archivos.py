@@ -1,3 +1,4 @@
+"""
 #ARCHIVOS
 #MANEJO DE LECTURA Y ESCRITURA DE ARCHIVOS
 
@@ -17,4 +18,39 @@ b = open("C:\Git\TipsPython\Pruebas\Doc\ArchivoEscritura.txt", "w") #esto abre e
 b.write("Uno \nDos \nTres")
 
 b.close()
+
+#CSV #https://thepythonguru.com/python-how-to-read-and-write-csv-files/
+#import pandas
+#df = pandas.read_csv("C:\Git\TipsPython\Pruebas\Doc\ej_csv.csv" , encoding='latin-1' )
+#print(df)
+
+import csv
+
+with open("C:\Git\TipsPython\Pruebas\Doc\ej_csv.csv", newline='') as Archivo:
+    reader = csv.reader(Archivo)
+    for linea in reader:
+        print(linea)
+
+
+#leer un CSV
+
+import csv
+
+with open("C:\Git\TipsPython\Pruebas\Doc\ej_csv.csv") as File:
+    reader = csv.reader(File, delimiter=',', quotechar=',',
+                        quoting=csv.QUOTE_MINIMAL)
+    for row in reader:
+        print(row)
+
+#import csv
+
+#with open("C:\Git\TipsPython\Pruebas\Doc\ej_csv.csv") as csvfile:
+#    readCSV = csv.reader(csvfile, delimiter=',')
+#    for row in readCSV:
+#        print(row)
+#        print(row[0])
+#        print(row[0],row[1],row[2],)
+
+#http://docs.python.org.ar/tutorial/
+"""
 
