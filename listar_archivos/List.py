@@ -1,13 +1,16 @@
 import os
 rootDir = '.'
 result = {}  # Declaramos el diccionario
-ruta_app = os.getcwd()
+#ruta_app = os.getcwd()
+#ruta_app = "C:/DERCO/PASAR_A_PDF/data/Parte_2/PDF_PARTE_2" #"C:/Users/jacunah/Documents/GCP/Resumen"
+ruta_app = "C:/DERCO/PASAR_A_PDF/TOTAL_NOTAS_PARA_LISTAR/data"
 print(ruta_app)
 
-mi_path = ruta_app +"/ashero.txt" #donde se aloja txt
+mi_path = ruta_app +"/LISTADO_paRTE4.txt" #donde se aloja txt
 f = open(mi_path, 'a+', encoding='utf-8')
 
-for dirName, subdirList, fileList in os.walk(rootDir):
+#for dirName, subdirList, fileList in os.walk(rootDir):
+for dirName, subdirList, fileList in os.walk(ruta_app):
     filenames = []  # Declaramos la lista en la que se almacenarán los nombres de archivo.
     for fname in fileList:
         filenames.append(fname)  # Añadimos el nombre de archivo a la lista
@@ -20,3 +23,4 @@ for dir, fileList in result.items():
         f.write('Directorio encontrado:' + dir + '\t' + fname + '\n')
 f.close()
 
+#C:\Git\TipsPython

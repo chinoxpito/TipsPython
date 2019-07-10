@@ -52,5 +52,20 @@ with open("C:\Git\TipsPython\Pruebas\Doc\ej_csv.csv") as File:
 #        print(row[0],row[1],row[2],)
 
 #http://docs.python.org.ar/tutorial/
-"""
 
+#json
+
+import json
+
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x:
+y = json.loads(x)
+
+# the result is a Python dictionary:
+print(y)
+print(y["age"])
+print(y["city"])
+
+"""
